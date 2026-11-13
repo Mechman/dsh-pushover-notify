@@ -1,0 +1,60 @@
+{
+  "name": "dsh-pushover-notify",
+  "version": "0.1.0",
+  "description": "Pushover push notifications for DeepSeek Harness: a ping when the agent asks a question, waits for an approval, or finishes a turn.",
+  "type": "module",
+  "license": "MIT",
+  "author": "dsh-pushover-notify contributors",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek",
+    "deepseek-harness",
+    "pushover",
+    "notifications",
+    "push-notification",
+    "human-in-the-loop",
+    "agent-notifications"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mechman/dsh-pushover-notify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mechman/dsh-pushover-notify/issues"
+  },
+  "homepage": "https://github.com/Mechman/dsh-pushover-notify#readme",
+  "main": "./src/index.mjs",
+  "exports": {
+    ".": "./src/index.mjs",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "examples",
+    "cordis.patch.yml",
+    "dsh.plugin.json",
+    "README.md",
+    "README.ru.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": ">=22.19.0",
+    "dsh": ">=0.2.2-alpha.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "node test/plugin.test.mjs",
+    "test:runner": "node --test test/",
+    "pack:check": "npm pack --dry-run"
+  }
+}

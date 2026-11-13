@@ -1,0 +1,6 @@
+# dsh-pushover-notify bundle patch: mount the host plugin under its own package
+# name, resolved through the profile's node_modules. The row is addressed by
+# `id`, so a later profile patch can override its `config` or disable it.
+- insert:
+    - id: pushover-notify
+      name: dsh-pushover-notify

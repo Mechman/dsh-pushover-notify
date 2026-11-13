@@ -1,0 +1,9 @@
+{
+  "name": "dsh-pushover-notify",
+  "description": "Pushover push notifications when DeepSeek Harness needs you: questions, approvals, finished turns.",
+  "version": "0.1.0",
+  "entry": {
+    "name": "pushover-notify",
+    "inject": []
+  }
+}
